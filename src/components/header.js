@@ -48,6 +48,7 @@ class Header extends Component{
         const {scrollTo} = this.props;
         return (
             <div className="header-component">
+            1
                 <div className="wrapper clearfix">
                     <a className="logo" href="/">
                         <img src="/image/logo.jpeg" alt=""/>
