@@ -126,7 +126,6 @@ class PartFive extends Component{  //第五部分
     constructor(props){
         super(props);
         this.state = {
-            doAnimationIf: false,
             textOne: '',
             textTwo: '',
             textThree: '',
@@ -146,9 +145,6 @@ class PartFive extends Component{  //第五部分
         }
     }
     doAnimation(){ //打字器
-        this.setState({
-            doAnimationIf: true
-        });
         let typewriter = setInterval(()=>{ //打字器
             if(this.state.textOne.length === this.msg[0].length && this.state.textTwo.length === this.msg[1].length && this.state.textThree.length === this.msg[2].length){
                 return clearInterval(typewriter);
@@ -169,17 +165,33 @@ class PartFive extends Component{  //第五部分
         return (
             <div ref={this.getEle} id="partFive" className="partFive-component">
                 <PartHeader title="详细计划"></PartHeader>
-                <div className="partFive-container">
-                    <Line>
-                        <div width='50%' className={`left-to-right calendar-container ${this.state.doAnimationIf ? 'end' : 'begin'}`}>
-                            
+                <div className="partFive-container clearfix">
+                        <div className="calendar-container">
+                            <img className="wow animated bounceInLeft" src="/image/date.svg" alt=""/>
                         </div>
-                        <div width='50%' className="typewriter-container">
-                            <h2>{this.state.textOne}</h2>
-                            <h2>{this.state.textTwo}</h2>
-                            <h2>{this.state.textThree}</h2>
+                        <div className="typewriter-container">
+                            <h2>
+                            {
+                                this.state.textOne.split('').map((item, index)=>{
+                                    return <span className="animated fadeIn" key={index}>{item}</span>
+                                })
+                            }
+                            </h2>
+                            <h2>
+                            {
+                                this.state.textTwo.split('').map((item, index)=>{
+                                    return <span className="animated fadeIn" key={index}>{item}</span>
+                                })
+                            }
+                            </h2>
+                            <h2>
+                            {
+                                this.state.textThree.split('').map((item, index)=>{
+                                    return <span className="animated fadeIn" key={index}>{item}</span>
+                                })
+                            }
+                            </h2>
                         </div>
-                    </Line>
                 </div>
             </div>
         )
