@@ -1,0 +1,39 @@
+.footer-component{
+    width: 100%;
+    background-color: rgba(3, 3, 4, .8);
+    ul{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1020px;
+        li{
+            float: left;         
+            text-align: center;
+            color: white;
+        }
+        li:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+//pc pad
+@media screen and (min-width: 566px){
+    .footer-component{
+        li{
+            width: 12.5%;
+            padding: 20px 0;
+            font-size: 13px;
+        }
+    }
+}
+
+//phone
+@media screen and (max-width: 566px){
+    .footer-component{
+        li{
+            width: 25%;
+            padding: .2rem 0;
+            font-size: .32rem;
+        }
+    }
+}

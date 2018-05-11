@@ -1,0 +1,317 @@
+.main-component{
+    width: 100%;
+    overflow: hidden;
+}
+.partOne-component{
+    width: 100%;
+    background: url(/image/bd1.jpg) no-repeat center center;
+}
+.partTwo-component{
+    width: 100%;
+    .wrapper{
+        width: 100%;
+        max-width: 1020px;
+        margin: 0 auto;
+        .produce-container{
+            margin: 0 auto;
+        }
+    }
+}
+.partThree-component{
+    width: 100%;
+    margin-top: 40px;
+    .wrapper{
+        width: 100%;
+        // max-width: 1020px;
+        // margin: 0 auto;
+        .advantage-container{
+            background-color: whitesmoke;
+            .top-to-bottom{
+                margin-left: 20px;
+                height: 100px;
+                transition: margin-top .5s ease-out;
+            }
+            .top-to-bottom.begin{
+                margin-top: -50px;
+            }
+            .top-to-bottom.end{
+                margin-top: 10px;
+            }
+            .right-to-left{
+                float: left;
+                transition: margin-left .7s ease-out;
+            }
+            .right-to-left.begin{
+                margin-left: 100%;
+            }
+            .right-to-left.end{
+                margin-left: 0;
+            }
+            .left-to-right{
+                float: right;
+                transition: margin-right .7s ease-out;
+            }
+            .left-to-right.begin{
+                margin-right: 100%;
+            }
+            .left-to-right.end{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.partFour-component{
+    width: 100%;
+    table,table tr th, table tr td { border:1px solid rgba(64, 224, 211, 0.3); }
+    table{
+        text-align: center;
+        width: 80%;
+        max-width: 1020px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 2px 2px rgba(64, 224, 211, 0.2);
+        thead{
+            background-color: rgba(64, 224, 211, 0.034);
+        }
+        td{
+            width: 33.3%;
+        }
+    }
+    .partFour-footer{
+        width: 80%;
+        max-width: 1020px;
+        h2{
+            text-align: left;
+            font-weight: 400;
+        }
+    }
+}
+
+.partFive-component{
+    width: 100%;
+    background-color: whitesmoke;
+    .partFive-container{
+        padding: 0 0 60px 0;
+    }
+    .calendar-container{
+        width: 400px;
+        height: 300px;
+        background-color: white;
+    }
+    .typewriter-container{
+        padding: 100px 10px;
+        h2{
+            text-align: left;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+    }
+    .left-to-right{
+        float: right;
+        transition: margin-right .7s ease-out;
+    }
+    .left-to-right.begin{
+        margin-right: 100%;
+    }
+    .left-to-right.end{
+        margin-right: 0;
+    }
+}
+
+
+.partSeven-component{
+    overflow: hidden;
+    width: 100%;
+    background-color: whitesmoke;   
+    .header{      
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+    .partSeven-container{
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        li{
+            width: 25%;
+            float: left;
+            img{
+                width: 50%;
+                height: 50%;
+                margin-left: 25%;
+            }
+            h3{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.partSixLine-component{
+    img{
+        float: right;
+    }
+    .text-container{
+        display: table;
+        float: right;
+        .text{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+//pc pad
+@media screen and (min-width: 566px){
+    .partOne-component{
+        height: 400px;
+    }
+    .partTwo-component{
+        margin-top: 20px;
+    }
+    .partFour-component{
+        table{
+            line-height: 44px;
+            font-size: 15px;
+        }
+        .partFour-footer{
+            margin: 20px auto;
+            h2{
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+    }
+    .partSix-component{
+        .partSix-container{
+            margin-bottom: 30px;
+            .rightImg{
+                width: 270px;
+                margin: 40px 0 0 20px;
+            }
+        }
+    }
+    .partSeven-component{
+        padding: 40px 0;
+        .header{
+            padding-bottom: 40px;
+            h1{
+                font-size: 25px;
+                line-height: 50px;
+            }
+            h2{
+                font-size: 13px;
+            }
+        }
+        .partSeven-container{
+            h3{
+                font-size: 15px;
+                line-height: 40px;
+            }
+        }
+    }
+    .partSixLine-component{
+        padding: 20px 0px;
+        img{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+        .text-container{
+            .text{
+                height: 60px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+//phone
+@media screen and (max-width: 566px){
+    .partOne-component{
+        height: 8rem;
+    }
+    .partTwo-component{
+        margin-top: 0.2rem;
+    }
+    .partFour-component{
+        table{
+            line-height: 0.7rem;
+            font-size: 0.32rem;
+        }
+        .partFour-footer{
+            margin: .2rem auto;
+            h2{
+                font-size: .32rem;
+                line-height: .6rem;
+            }
+        }
+    }
+    .partSix-component{
+        .partSix-container{
+            margin-bottom: .5rem;
+            .rightImg{
+                width: 4.5rem;
+                margin: 1.5rem 0 0 .3rem;
+            }
+        }
+    }
+    .partSeven-component{
+        padding: .5rem 0;
+        .header{
+            padding-bottom: .5rem;
+            h1{
+                font-size: .5rem;
+                line-height: 1rem;
+            }
+            h2{
+                font-size: .32rem;
+            }
+        }
+        .partSeven-container{
+            h3{
+                font-size: .32rem;
+                line-height: .8rem;
+            }
+        }
+    }
+    .partSixLine-component{
+        padding: .2rem 0;
+        img{
+            width: .7rem;
+            height: .7rem;
+            margin-right: .2rem;
+            margin-top: .4rem;
+        }
+        .text-container{
+            .text{
+                height: 1.5rem;
+                font-size: .32rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px){  //小于960时产品要一行显示两个
+    .partTwo-component{
+        .produce-container{
+            max-width: 440px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 960px){  //大于960时产品要一行显示四个
+    .partTwo-component{
+        .produce-container{
+            width: 960px;
+        }
+    }
+}
+

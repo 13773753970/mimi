@@ -1,0 +1,42 @@
+.produce-component{
+    float: left;
+    img{
+        width: 100%;
+    }
+    h2{
+        text-align: center;
+    }
+}
+.produce-component:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) and (min-width: 456px){  //小于960大于440时产品要一行显示两个，固定宽高
+    .produce-component{
+        margin: 10px;
+        width: 200px;
+        h2{
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 960px){  //大于960时产品要一行显示四个
+    .produce-component{
+        margin: 0 20px;
+        width: 200px;
+        h2{
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 456px){  //小于440时产品要一行显示两个，宽高rem变化
+    .produce-component{
+        width: 4.7rem;
+        margin: 0 .125rem .25rem .125rem;
+        h2{
+            font-size: 0.32rem;
+        }
+    }
+}
